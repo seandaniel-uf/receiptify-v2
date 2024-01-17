@@ -47,7 +47,7 @@ export const Form = ({ handleFormUpdate }: FormProps) => {
         <label htmlFor="artists">Artists</label>
       </fieldset>
       <fieldset>
-        <label htmlFor="time_range">Time Range</label>
+        <label htmlFor="time_range">Time Period</label>
         <input
           type="radio"
           name="time_range"

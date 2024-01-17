@@ -29,10 +29,10 @@ export const Receipt = ({ receiptData }) => {
   };
   return (
     <div className="receipt-container">
-      <h2>Spotify Receipt</h2>
+      <h3>Spotify Receipt</h3>
       {receiptData?.items && (
         <>
-          <p>Time Range: {returnTimeRange(receiptData)}</p>
+          <p>{returnTimeRange(receiptData)}</p>
           <p>Order #{generateRandom5DigitNumber()} for **NAME**</p>
           <p>{currentDate}</p>
           <table>

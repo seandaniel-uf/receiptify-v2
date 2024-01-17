@@ -6,11 +6,17 @@ import { Header } from "./Components/Header";
 import { Login } from "./Components/Login";
 import { ReceiptFormContainer } from "./Components/ReceiptFormContainer";
 
-// todo: LOADING STATE instead of checking receiptData in Receipt.tsx
-// todo: API Error state
-// todo: Form values update one late
+// todo: Finish Receipt.tsx
 // todo: Artists vs Tracks API call
+// todo: LOADING STATE instead of checking receiptData in Receipt.tsx
+// todo: Form values update one late
 // todo: Receipt helper functions in their own file
+// todo: Showcase username
+
+// todo: API Error state
+// todo: Session storage instead of local storage?
+// todo: Download image functionality
+// todo: Save as Playlist functionality
 
 function App() {
   const [token, setToken] = useState<string | null>("");
@@ -34,6 +40,7 @@ function App() {
     setToken(token);
   }, []);
 
+  // on form change
   const handleChange = useCallback(
     async ({
       type = "tracks",
