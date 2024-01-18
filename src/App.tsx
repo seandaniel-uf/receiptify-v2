@@ -2,16 +2,17 @@ import { useEffect, useState, useCallback } from "react";
 import axios from "axios";
 import "./index.scss";
 
+import { type ReceiptProps } from "./Components/Receipt";
 // components
 import { Header } from "./Components/Header";
 import { Login } from "./Components/Login";
 import { ReceiptFormContainer } from "./Components/ReceiptFormContainer";
 
-// todo: Artists vs Tracks API call
+// todo: DONE: Artists vs Tracks API call
 // todo: DONE: Loading state instead of checking receiptData in Receipt.tsx
 // todo: DONE: Form values update one late
-// todo: Legend
-// todo: Receipt helper functions in their own file
+// todo: DONE: Legend
+// todo: DONE: Receipt helper functions in their own file
 // todo: DONE: Showcase username
 
 // todo: API Error state
@@ -20,7 +21,10 @@ import { ReceiptFormContainer } from "./Components/ReceiptFormContainer";
 
 function App() {
   const [token, setToken] = useState<string | null>("");
-  const [receiptData, setReceiptData] = useState([]);
+  const [receiptData, setReceiptData] = useState<ReceiptProps>({
+    href: "",
+    items: [],
+  });
 
   const handleLogin = () => {
     // if previous user, grab access_token
@@ -58,7 +62,7 @@ function App() {
         return;
       }
       try {
-        const data = await axios.get(
+        const response = await axios.get<ReceiptProps>(
           `https://api.spotify.com/v1/me/top/${type}?limit=${limit}&offset=0&time_range=${time_range}`,
           {
             headers: {
@@ -67,8 +71,8 @@ function App() {
           }
         );
         // Handle the data as needed
-        console.log(data.data);
-        setReceiptData(data.data);
+        console.log(response.data);
+        setReceiptData(response.data);
       } catch (error) {
         // Handle errors
         console.error("Error fetching data:", error);
