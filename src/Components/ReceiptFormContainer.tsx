@@ -14,8 +14,8 @@ export const ReceiptFormContainer = ({
   return (
     isLoggedIn && (
       <div className="form-receipt-container">
-        <h2>Customize Receipt</h2>
         <Receipt receiptData={receiptData} />
+        <h2>Customize Receipt</h2>
         <Form handleFormUpdate={handleFormUpdate} />
       </div>
     )

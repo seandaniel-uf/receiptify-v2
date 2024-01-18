@@ -1,20 +1,20 @@
 import { useEffect, useState, useCallback } from "react";
 import axios from "axios";
 import "./index.scss";
+
 // components
 import { Header } from "./Components/Header";
 import { Login } from "./Components/Login";
 import { ReceiptFormContainer } from "./Components/ReceiptFormContainer";
 
-// todo: Finish Receipt.tsx
 // todo: Artists vs Tracks API call
-// todo: LOADING STATE instead of checking receiptData in Receipt.tsx
-// todo: Form values update one late
+// todo: DONE: Loading state instead of checking receiptData in Receipt.tsx
+// todo: DONE: Form values update one late
+// todo: Legend
 // todo: Receipt helper functions in their own file
-// todo: Showcase username
+// todo: DONE: Showcase username
 
 // todo: API Error state
-// todo: Session storage instead of local storage?
 // todo: Download image functionality
 // todo: Save as Playlist functionality
 
@@ -22,10 +22,12 @@ function App() {
   const [token, setToken] = useState<string | null>("");
   const [receiptData, setReceiptData] = useState([]);
 
-  // on login
-  useEffect(() => {
+  const handleLogin = () => {
+    // if previous user, grab access_token
     const hash = window.location.hash;
     let token = window.localStorage.getItem("token");
+
+    // if new user, create an access_token
     if (!token && hash) {
       token = hash
         .substring(1)
@@ -38,7 +40,12 @@ function App() {
     }
 
     setToken(token);
-  }, []);
+  };
+
+  const handleLogout = () => {
+    window.localStorage.removeItem("token");
+    setToken("");
+  };
 
   // on form change
   const handleChange = useCallback(
@@ -69,7 +76,9 @@ function App() {
     },
     [token]
   );
+
   useEffect(() => {
+    handleLogin();
     handleChange();
   }, [token, handleChange]);
 
@@ -77,6 +86,7 @@ function App() {
     <div>
       <div className="wrapper">
         <Header title="Spotify Receipts" />
+        <button onClick={handleLogout}>Log Out</button>
         <main>
           <Login isLoggedIn={token} />
           <ReceiptFormContainer

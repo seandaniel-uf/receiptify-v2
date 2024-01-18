@@ -1,11 +1,9 @@
-import { useState } from "react";
-
+import { useState, useEffect } from "react";
 export interface FormData {
   type: string;
   time_range: string;
   limit: string;
 }
-
 export interface FormProps {
   handleFormUpdate: (formData: FormData) => void;
 }
@@ -16,17 +14,24 @@ export const Form = ({ handleFormUpdate }: FormProps) => {
     time_range: "short_term",
     limit: "10",
   });
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setFormData({
-      ...formData,
+    setFormData((prevFormData) => ({
+      ...prevFormData,
       [e.target.name]: e.target.value,
-    });
-    handleFormUpdate(formData);
+    }));
   };
+
+  // tell useEffect to watch for changes to formData, once changed, prop the value
+  // prevously without a useEffect we were propping the data before it was updated
+  useEffect(() => {
+    handleFormUpdate(formData);
+  }, [formData, handleFormUpdate]);
+
   return (
     <form>
       <fieldset>
-        <label htmlFor="type">Music</label>
+        <h3>Music</h3>
         <input
           type="radio"
           name="type"
@@ -47,7 +52,7 @@ export const Form = ({ handleFormUpdate }: FormProps) => {
         <label htmlFor="artists">Artists</label>
       </fieldset>
       <fieldset>
-        <label htmlFor="time_range">Time Period</label>
+        <h3>Time Period</h3>
         <input
           type="radio"
           name="time_range"
@@ -77,7 +82,7 @@ export const Form = ({ handleFormUpdate }: FormProps) => {
         <label htmlFor="long_term">All Time</label>
       </fieldset>
       <fieldset>
-        <label htmlFor="limit">Length</label>
+        <h3>Length</h3>
         <input
           type="radio"
           name="limit"
