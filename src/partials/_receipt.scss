@@ -1,0 +1,68 @@
+@import "./variables";
+
+.receipt-container {
+  text-transform: uppercase;
+  font-family: $secondaryFont;
+  margin-top: 100px;
+  width: 380px;
+  padding: 50px 25px;
+  filter: brightness(105%);
+  background-position-x: -10px;
+  background-image: url("https://receiptify.herokuapp.com/wrinkled-paper-texture-7.jpg");
+  .receipt-title-subtitle-container {
+    text-transform: uppercase;
+    h3 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: $primaryFont;
+      font-weight: 600;
+      font-size: 30px;
+      margin-bottom: 25px;
+      svg {
+        margin-left: 10px;
+      }
+    }
+    p {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+  }
+  .order-number-date-container {
+    margin-bottom: 10px;
+  }
+}
+
+table {
+  display: table;
+  width: 100%;
+  thead {
+    display: table-cell;
+    border-top: 1px dashed $primaryColor;
+    border-bottom: 1px dashed $primaryColor;
+  }
+  tr {
+    td {
+      width: 100px;
+      padding: 2.5px 10px;
+      display: table-cell;
+      text-align: left;
+      vertical-align: top;
+      &.begin {
+        padding-left: 0;
+      }
+      &.name {
+        width: 225px;
+      }
+      &.end {
+        text-align: right;
+        padding-right: 0px;
+      }
+    }
+  }
+}
+
+.form-receipt-container {
+  display: flex;
+  justify-content: space-between;
+}

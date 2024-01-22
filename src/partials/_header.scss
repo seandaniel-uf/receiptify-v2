@@ -1,0 +1,13 @@
+@import "./variables";
+
+header {
+  margin: 100px 0 0 0;
+  text-align: center;
+  h1 {
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 12.5px;
+    font-family: $secondaryFont;
+    font-size: 40px;
+  }
+}

@@ -1,5 +1,6 @@
 import { useEffect, useCallback, useState } from "react";
 import axios from "axios";
+import { FaSpotify } from "react-icons/fa";
 
 // components
 import { Loading } from "./Loading";
@@ -48,25 +49,33 @@ export const Receipt = ({ receiptData }: { receiptData: ReceiptProps }) => {
     <Loading />
   ) : (
     <div className="receipt-container">
-      <h3>Spotify Receipt</h3>
-      <p>{returnTimeRange(receiptData)}</p>
-      <p>
-        Order #{generateRandomNumber(5)} for {userName}
-      </p>
-      <p>{currentDate}</p>
+      <div className="receipt-title-subtitle-container">
+        <h3>
+          Receipt <FaSpotify />
+        </h3>
+        <p>{returnTimeRange(receiptData)}</p>
+      </div>
+      <div className="order-number-date-container">
+        <p>
+          Order #{generateRandomNumber(5)} for {userName}
+        </p>
+        <p>{currentDate}</p>
+      </div>
       <table>
         <thead>
           <tr>
-            <td>Qty</td>
+            <td className="begin">Qty</td>
             <td>Item</td>
-            <td>Amt</td>
+            <td className="end">Amt</td>
           </tr>
         </thead>
         <tbody>
           {receiptData.items.map((item, index) => (
             <tr key={item.id}>
-              <td>{index + 1 <= 9 ? `0${index + 1}` : index + 1}</td>
-              <td>
+              <td className="begin">
+                {index + 1 <= 9 ? `0${index + 1}` : index + 1}
+              </td>
+              <td className="name">
                 <a
                   target="_blank"
                   rel="noopener noreferrer"
@@ -80,7 +89,7 @@ export const Receipt = ({ receiptData }: { receiptData: ReceiptProps }) => {
                     ?.join(", ")}
                 </a>
               </td>
-              <td>
+              <td className="end">
                 {item.duration_ms
                   ? formatTimeFromSeconds(item.duration_ms)
                   : item.popularity}
@@ -96,12 +105,12 @@ export const Receipt = ({ receiptData }: { receiptData: ReceiptProps }) => {
           <td>Total:</td>
           <td>{addTotal(receiptData)}</td>
         </tr>
-        <div className="card-info-container">
+        <tr className="card-info-container">
           <p>Card #: **** **** **** {generateRandomNumber(4)}</p>
           <p>Auth Code: {generateRandomNumber(5)}</p>
           <p>Card: {userName}</p>
-        </div>
-        <div className="barcode-container">
+        </tr>
+        <tr className="barcode-container">
           <p>Thank you for visiting!</p>
           <img
             src="https://receiptify.herokuapp.com/barcode.png"
@@ -112,7 +121,7 @@ export const Receipt = ({ receiptData }: { receiptData: ReceiptProps }) => {
             src="https://receiptify.herokuapp.com/assets/img/Spotify_Logo_RGB_Black.png"
             alt="Spotify"
           />
-        </div>
+        </tr>
       </table>
     </div>
   );
