@@ -46,10 +46,10 @@ function App() {
     setToken(token);
   };
 
-  // const handleLogout = () => {
-  //   window.localStorage.removeItem("token");
-  //   setToken("");
-  // };
+  const handleLogout = () => {
+    window.localStorage.removeItem("token");
+    setToken("");
+  };
 
   // on form change
   const handleChange = useCallback(
@@ -90,7 +90,7 @@ function App() {
     <div>
       <div className="wrapper">
         <Header title="Spotify Receipts" subTitle="Top Tracks Generator" />
-        {/* <button onClick={handleLogout}>Log Out</button> */}
+        <button onClick={handleLogout}>Log Out</button>
         <main>
           {!token && <Login />}
           <ReceiptFormContainer

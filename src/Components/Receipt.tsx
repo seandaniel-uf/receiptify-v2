@@ -82,9 +82,10 @@ export const Receipt = ({ receiptData }: { receiptData: ReceiptProps }) => {
                   href={item.external_urls.spotify}
                 >
                   {item.name}
+                  {item.artists && " - "}
                   {item.artists
                     ?.map(
-                      (artistInfo: { name: string }) => ` - ${artistInfo?.name}`
+                      (artistInfo: { name: string }) => `${artistInfo?.name}`
                     )
                     ?.join(", ")}
                 </a>
@@ -96,33 +97,39 @@ export const Receipt = ({ receiptData }: { receiptData: ReceiptProps }) => {
               </td>
             </tr>
           ))}
+          <tr className="item-count">
+            <td className="begin" colSpan={2}>
+              Item Count:
+            </td>
+            <td className="end">{receiptData.items.length}</td>
+          </tr>
+          <tr className="total-count">
+            <td className="begin" colSpan={2}>
+              Total:
+            </td>
+            <td className="end">{addTotal(receiptData)}</td>
+          </tr>
         </tbody>
-        <tr>
-          <td>Item Count:</td>
-          <td>{receiptData.items.length}</td>
-        </tr>
-        <tr>
-          <td>Total:</td>
-          <td>{addTotal(receiptData)}</td>
-        </tr>
-        <tr className="card-info-container">
-          <p>Card #: **** **** **** {generateRandomNumber(4)}</p>
-          <p>Auth Code: {generateRandomNumber(5)}</p>
-          <p>Card: {userName}</p>
-        </tr>
-        <tr className="barcode-container">
-          <p>Thank you for visiting!</p>
-          <img
-            src="https://receiptify.herokuapp.com/barcode.png"
-            alt="A barcode"
-          />
-          <p>spotifyreceipts.com</p>
-          <img
-            src="https://receiptify.herokuapp.com/assets/img/Spotify_Logo_RGB_Black.png"
-            alt="Spotify"
-          />
-        </tr>
       </table>
+      <div className="card-info-container">
+        <p>Card #: **** **** **** {generateRandomNumber(4)}</p>
+        <p>Auth Code: {generateRandomNumber(5)}</p>
+        <p>Cardholder: {userName}</p>
+      </div>
+      <div className="barcode-container">
+        <p className="thank-you-text">Thank you for visiting!</p>
+        <img
+          src="https://receiptify.herokuapp.com/barcode.png"
+          alt="A barcode"
+          className="barcode"
+        />
+        <p>spotifyreceipts.com</p>
+        <img
+          src="https://receiptify.herokuapp.com/assets/img/Spotify_Logo_RGB_Black.png"
+          alt="Spotify"
+          className="spotify-logo"
+        />
+      </div>
     </div>
   );
 };
