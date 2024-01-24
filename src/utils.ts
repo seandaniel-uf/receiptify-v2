@@ -8,6 +8,7 @@ export const currentDate = new Date().toLocaleDateString("en-US", {
 });
 
 export const generateRandomNumber = (numDigits: number): number => {
+  console.log("Generating Random Number");
   const min = Math.pow(10, numDigits - 1);
   const max = Math.pow(10, numDigits) - 1;
 

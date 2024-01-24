@@ -1,3 +1,10 @@
+// todo: FEATURE: Download Receipt
+// todo: FEATURE: Save as Playlist
+// todo: FEATURE: Open Receipt in New Tab
+// todo: BUG: Song name width - 10 to 50
+// todo: RESPONSIVENESS
+// todo: API Error states
+
 import { useEffect, useState, useCallback } from "react";
 import axios from "axios";
 import "./index.scss";
@@ -7,17 +14,6 @@ import { type ReceiptProps } from "./Components/Receipt";
 import { Header } from "./Components/Header";
 import { Login } from "./Components/Login";
 import { ReceiptFormContainer } from "./Components/ReceiptFormContainer";
-
-// todo: DONE: Artists vs Tracks API call
-// todo: DONE: Loading state instead of checking receiptData in Receipt.tsx
-// todo: DONE: Form values update one late
-// todo: DONE: Legend
-// todo: DONE: Receipt helper functions in their own file
-// todo: DONE: Showcase username
-
-// todo: API Error state
-// todo: Download image functionality
-// todo: Save as Playlist functionality
 
 function App() {
   const [token, setToken] = useState<string | null>("");
@@ -70,11 +66,8 @@ function App() {
             },
           }
         );
-        // Handle the data as needed
-        console.log(response.data);
         setReceiptData(response.data);
       } catch (error) {
-        // Handle errors
         console.error("Error fetching data:", error);
       }
     },
@@ -90,13 +83,13 @@ function App() {
     <div>
       <div className="wrapper">
         <Header title="Spotify Receipts" subTitle="Top Tracks Generator" />
-        <button onClick={handleLogout}>Log Out</button>
         <main>
           {!token && <Login />}
           <ReceiptFormContainer
             isLoggedIn={token}
             handleFormUpdate={handleChange}
             receiptData={receiptData}
+            logOut={handleLogout}
           />
         </main>
       </div>

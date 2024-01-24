@@ -4,18 +4,20 @@ import { Receipt, type ReceiptProps } from "./Receipt";
 export interface ReceiptFormContainerProps {
   isLoggedIn: string | null;
   handleFormUpdate: (formData: FormData) => void;
+  logOut: () => void;
   receiptData: ReceiptProps;
 }
 export const ReceiptFormContainer = ({
   isLoggedIn,
   handleFormUpdate,
   receiptData,
+  logOut,
 }: ReceiptFormContainerProps) => {
   return (
     isLoggedIn && (
-      <div className="form-receipt-container">
+      <div className="receipt-form-container">
         <Receipt receiptData={receiptData} />
-        <Form handleFormUpdate={handleFormUpdate} />
+        <Form handleFormUpdate={handleFormUpdate} logOut={logOut} />
       </div>
     )
   );

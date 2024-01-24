@@ -1,0 +1,64 @@
+@import "./variables";
+.form-legend-container {
+  form {
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+    h2 {
+      font-family: $secondaryFont;
+      font-weight: 600;
+      margin-bottom: 25px;
+    }
+    fieldset {
+      margin-bottom: 20px;
+      border: none;
+      padding: 0px;
+      h3 {
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+      input[type="radio"] {
+        display: none;
+        + label {
+          padding: 15px 20px;
+          font-weight: 500;
+          border: 3px solid $primaryColor;
+          border-radius: 20px;
+          cursor: pointer;
+          margin-right: 5px;
+          background-color: $secondaryColor;
+          display: inline-block;
+          transition: background-color 0.35s, color 0.35s;
+          &:last-child {
+            margin-right: 0px;
+          }
+        }
+        &:checked + label {
+          background-color: $primaryColor;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  font-weight: 500;
+  border: 3px solid $primaryColor;
+  border-radius: 20px;
+  background: #1db954;
+  transition: background-color 0.35s, color 0.35s, border-radius 0.35s;
+  svg {
+    margin-left: 10px;
+    font-size: 20px;
+  }
+  &:hover,
+  &:focus {
+    background-color: $primaryColor;
+    color: $secondaryColor;
+    border-radius: 30px;
+  }
+}

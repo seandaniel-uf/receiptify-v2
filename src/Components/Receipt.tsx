@@ -1,4 +1,4 @@
-import { useEffect, useCallback, useState } from "react";
+import { useEffect, useCallback, useState, useMemo } from "react";
 import axios from "axios";
 import { FaSpotify } from "react-icons/fa";
 
@@ -30,6 +30,8 @@ export interface ReceiptProps {
 
 export const Receipt = ({ receiptData }: { receiptData: ReceiptProps }) => {
   const [userName, setUserName] = useState<string>("");
+  const randomNumber4 = useMemo(() => generateRandomNumber(4), []);
+  const randomNumber5 = useMemo(() => generateRandomNumber(5), []);
 
   const getUserName = useCallback(async () => {
     const token = window.localStorage.getItem("token");
@@ -57,7 +59,7 @@ export const Receipt = ({ receiptData }: { receiptData: ReceiptProps }) => {
       </div>
       <div className="order-number-date-container">
         <p>
-          Order #{generateRandomNumber(5)} for {userName}
+          Order #{randomNumber5} for {userName}
         </p>
         <p>{currentDate}</p>
       </div>
@@ -112,8 +114,8 @@ export const Receipt = ({ receiptData }: { receiptData: ReceiptProps }) => {
         </tbody>
       </table>
       <div className="card-info-container">
-        <p>Card #: **** **** **** {generateRandomNumber(4)}</p>
-        <p>Auth Code: {generateRandomNumber(5)}</p>
+        <p>Card #: **** **** **** {randomNumber4}</p>
+        <p>Auth Code: {randomNumber5}</p>
         <p>Cardholder: {userName}</p>
       </div>
       <div className="barcode-container">

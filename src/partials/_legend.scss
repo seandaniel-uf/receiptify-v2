@@ -1,0 +1,19 @@
+.legend-container {
+  margin-top: 50px;
+  width: 424px;
+  h2 {
+    margin-bottom: 25px;
+  }
+  div {
+    height: 100px;
+    p {
+      span {
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+      &:first-child {
+        margin-bottom: 5px;
+      }
+    }
+  }
+}

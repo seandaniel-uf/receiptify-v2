@@ -8,9 +8,10 @@ export interface FormData {
 }
 export interface FormProps {
   handleFormUpdate: (formData: FormData) => void;
+  logOut: () => void;
 }
 
-export const Form = ({ handleFormUpdate }: FormProps) => {
+export const Form = ({ handleFormUpdate, logOut }: FormProps) => {
   const [formData, setFormData] = useState({
     type: "tracks",
     time_range: "short_term",
@@ -33,7 +34,7 @@ export const Form = ({ handleFormUpdate }: FormProps) => {
   return (
     <section className="form-legend-container">
       <form>
-        <h2>Customize Receipt</h2>
+        <h2>Customize Your Receipt</h2>
         <fieldset>
           <h3>Music</h3>
           <input
@@ -108,7 +109,7 @@ export const Form = ({ handleFormUpdate }: FormProps) => {
           <label htmlFor="50">Top 50</label>
         </fieldset>
       </form>
-      <Legend tracksSelected={formData.type === "tracks"} />
+      <Legend tracksSelected={formData.type === "tracks"} logOut={logOut} />
     </section>
   );
 };
