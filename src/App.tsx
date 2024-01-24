@@ -29,6 +29,7 @@ function App() {
 
     // if new user, create an access_token
     if (!token && hash) {
+      // @ts-expect-error: Object is possibly 'null'.
       token = hash
         .substring(1)
         .split("&")
