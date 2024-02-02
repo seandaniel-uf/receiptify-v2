@@ -8,7 +8,6 @@ export const currentDate = new Date().toLocaleDateString("en-US", {
 });
 
 export const generateRandomNumber = (numDigits: number): number => {
-  console.log("Generating Random Number");
   const min = Math.pow(10, numDigits - 1);
   const max = Math.pow(10, numDigits) - 1;
 
@@ -26,7 +25,7 @@ export const returnTimeRange = (receiptData: ReceiptProps): string => {
   }
 };
 
-export const formatTimeFromSeconds = (milliseconds: number): string => {
+export const formatTimeFromMilliseconds = (milliseconds: number): string => {
   const totalSeconds = Math.floor(milliseconds / 1000);
   const mins = Math.floor(totalSeconds / 60);
   const secs = totalSeconds % 60;
@@ -43,5 +42,5 @@ export const addTotal = (receiptData: ReceiptProps): string | number => {
     );
   }, 0);
 
-  return isTimeFormat ? formatTimeFromSeconds(totalValue) : totalValue;
+  return isTimeFormat ? formatTimeFromMilliseconds(totalValue) : totalValue;
 };

@@ -2,7 +2,8 @@
 // todo: FEATURE: Save as Playlist
 // todo: FEATURE: Open Receipt in New Tab
 // todo: BUG: Song name width - 10 to 50
-// todo: RESPONSIVENESS
+// todo: Responsiveness
+// todo: Test Coverage 100%
 // todo: API Error states
 
 import { useEffect, useState, useCallback } from "react";

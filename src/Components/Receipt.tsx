@@ -10,7 +10,7 @@ import {
   currentDate,
   generateRandomNumber,
   returnTimeRange,
-  formatTimeFromSeconds,
+  formatTimeFromMilliseconds,
   addTotal,
 } from "../utils.ts";
 
@@ -23,7 +23,7 @@ export interface ReceiptProps {
     };
     name: string;
     artists?: { name: string }[];
-    duration_ms?: number;
+    duration_ms?: number | null;
     popularity?: number;
   }[];
 }
@@ -94,7 +94,7 @@ export const Receipt = ({ receiptData }: { receiptData: ReceiptProps }) => {
               </td>
               <td className="end">
                 {item.duration_ms
-                  ? formatTimeFromSeconds(item.duration_ms)
+                  ? formatTimeFromMilliseconds(item.duration_ms)
                   : item.popularity}
               </td>
             </tr>
