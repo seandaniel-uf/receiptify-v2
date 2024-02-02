@@ -84,7 +84,7 @@ function App() {
   return (
     <div>
       <div className="wrapper">
-        <Header title="Spotify Receipts" subTitle="Top Music Generator" />
+        <Header title="Receiptify" subTitle="Top Music Generator" />
         <main>
           {!token && <Login />}
           <ReceiptFormContainer
