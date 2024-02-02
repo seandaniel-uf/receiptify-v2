@@ -2,7 +2,7 @@ import { FaSpotify } from "react-icons/fa";
 
 export const Login = () => {
   const CLIENT_ID = "b0bcfd9d4f2345039350ddf256441f65";
-  const REDIRECT_URI = "http://localhost:5173/";
+  const REDIRECT_URI = "https://spotify-receipts.netlify.app/";
   const AUTH_ENDPOINT = "https://accounts.spotify.com/authorize";
   const RESPONSE_TYPE = "token";
   return (
