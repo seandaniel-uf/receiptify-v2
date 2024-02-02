@@ -1,5 +1,11 @@
+@import "./variables";
+
 .receipt-form-container {
   display: flex;
   justify-content: center;
   margin-top: 50px;
+  @media (max-width: $mediumBreakpoint) {
+    align-items: center;
+    flex-direction: column;
+  }
 }

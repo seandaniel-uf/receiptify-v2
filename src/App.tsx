@@ -2,9 +2,9 @@
 // todo: FEATURE: Save as Playlist
 // todo: FEATURE: Open Receipt in New Tab
 // todo: BUG: Song name width - 10 to 50
-// todo: Responsiveness
 // todo: Test Coverage 100%
 // todo: API Error states
+// todo: BUG: punycode module deprecated
 
 import { useEffect, useState, useCallback } from "react";
 import axios from "axios";
@@ -26,7 +26,7 @@ function App() {
   const handleLogin = () => {
     // if previous user, grab access_token
     const hash = window.location.hash;
-    let token = window.localStorage.getItem("token");
+    let token = window.sessionStorage.getItem("token");
 
     // if new user, create an access_token
     if (!token && hash) {
@@ -38,14 +38,14 @@ function App() {
         .split("=")[1];
 
       window.location.hash = "";
-      window.localStorage.setItem("token", token);
+      window.sessionStorage.setItem("token", token);
     }
 
     setToken(token);
   };
 
   const handleLogout = () => {
-    window.localStorage.removeItem("token");
+    window.sessionStorage.removeItem("token");
     setToken("");
   };
 

@@ -34,7 +34,7 @@ export const Receipt = ({ receiptData }: { receiptData: ReceiptProps }) => {
   const randomNumber5 = useMemo(() => generateRandomNumber(5), []);
 
   const getUserName = useCallback(async () => {
-    const token = window.localStorage.getItem("token");
+    const token = window.sessionStorage.getItem("token");
     const data = await axios.get("https://api.spotify.com/v1/me", {
       headers: {
         Authorization: `Bearer ${token}`,

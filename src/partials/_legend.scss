@@ -1,11 +1,20 @@
+@import "./variables";
+
 .legend-container {
   margin-top: 50px;
   width: 424px;
+  @media (max-width: $mediumBreakpoint) {
+    width: 350px;
+    margin: 50px 0 50px 0;
+  }
   h2 {
     margin-bottom: 25px;
   }
   div {
     height: 100px;
+    @media (max-width: $mediumBreakpoint) {
+      height: 150px;
+    }
     p {
       span {
         font-weight: 600;

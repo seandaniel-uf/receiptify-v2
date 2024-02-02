@@ -37,76 +37,87 @@ export const Form = ({ handleFormUpdate, logOut }: FormProps) => {
         <h2>Customize Your Receipt</h2>
         <fieldset>
           <h3>Music</h3>
-          <input
-            type="radio"
-            name="type"
-            id="tracks"
-            value="tracks"
-            checked={formData.type === "tracks"}
-            onChange={(e) => handleChange(e)}
-          />
-          <label htmlFor="tracks">Tracks</label>
-          <input
-            type="radio"
-            name="type"
-            id="artists"
-            value="artists"
-            checked={formData.type === "artists"}
-            onChange={(e) => handleChange(e)}
-          />
-          <label htmlFor="artists">Artists</label>
+          <div className="input-container">
+            <input
+              type="radio"
+              name="type"
+              id="tracks"
+              value="tracks"
+              checked={formData.type === "tracks"}
+              onChange={(e) => handleChange(e)}
+            />
+            <label htmlFor="tracks">Tracks</label>
+
+            <input
+              type="radio"
+              name="type"
+              id="artists"
+              value="artists"
+              checked={formData.type === "artists"}
+              onChange={(e) => handleChange(e)}
+            />
+            <label htmlFor="artists">Artists</label>
+          </div>
         </fieldset>
         <fieldset>
           <h3>Time Period</h3>
-          <input
-            type="radio"
-            name="time_range"
-            id="short_term"
-            value="short_term"
-            checked={formData.time_range === "short_term"}
-            onChange={(e) => handleChange(e)}
-          />
-          <label htmlFor="short_term">Last Month</label>
-          <input
-            type="radio"
-            name="time_range"
-            id="medium_term"
-            value="medium_term"
-            checked={formData.time_range === "medium_term"}
-            onChange={(e) => handleChange(e)}
-          />
-          <label htmlFor="medium_term">Last 6 Months</label>
-          <input
-            type="radio"
-            name="time_range"
-            id="long_term"
-            value="long_term"
-            checked={formData.time_range === "long_term"}
-            onChange={(e) => handleChange(e)}
-          />
-          <label htmlFor="long_term">All Time</label>
+          <div className="input-container">
+            <input
+              type="radio"
+              name="time_range"
+              id="short_term"
+              value="short_term"
+              checked={formData.time_range === "short_term"}
+              onChange={(e) => handleChange(e)}
+            />
+            <label htmlFor="short_term">Last Month</label>
+
+            <input
+              type="radio"
+              name="time_range"
+              id="medium_term"
+              value="medium_term"
+              checked={formData.time_range === "medium_term"}
+              onChange={(e) => handleChange(e)}
+            />
+            <label htmlFor="medium_term">Last 6 Months</label>
+
+            <input
+              type="radio"
+              name="time_range"
+              id="long_term"
+              value="long_term"
+              checked={formData.time_range === "long_term"}
+              onChange={(e) => handleChange(e)}
+            />
+            <label htmlFor="long_term" className="long-term-label">
+              All Time
+            </label>
+          </div>
         </fieldset>
         <fieldset>
           <h3>Length</h3>
-          <input
-            type="radio"
-            name="limit"
-            id="10"
-            value="10"
-            checked={formData.limit === "10"}
-            onChange={(e) => handleChange(e)}
-          />
-          <label htmlFor="10">Top 10</label>
+          <div className="input-container">
+            <input
+              type="radio"
+              name="limit"
+              id="10"
+              value="10"
+              checked={formData.limit === "10"}
+              onChange={(e) => handleChange(e)}
+            />
+            <label htmlFor="10">Top 10</label>
 
-          <input
-            type="radio"
-            name="limit"
-            id="50"
-            value="50"
-            checked={formData.limit === "50"}
-            onChange={(e) => handleChange(e)}
-          />
-          <label htmlFor="50">Top 50</label>
+            <input
+              type="radio"
+              name="limit"
+              id="50"
+              value="50"
+              checked={formData.limit === "50"}
+              onChange={(e) => handleChange(e)}
+            />
+            <label htmlFor="50">Top 50</label>
+          </div>
         </fieldset>
       </form>
       <Legend tracksSelected={formData.type === "tracks"} logOut={logOut} />

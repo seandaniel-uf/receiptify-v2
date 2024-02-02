@@ -1,9 +1,16 @@
 @import "./variables";
+
 .form-legend-container {
+  @media (max-width: $mediumBreakpoint) {
+    width: 350px;
+  }
   form {
     display: flex;
     flex-direction: column;
     width: max-content;
+    @media (max-width: $mediumBreakpoint) {
+      width: 350px;
+    }
     h2 {
       font-family: $secondaryFont;
       font-weight: 600;
@@ -17,25 +24,34 @@
         font-weight: 600;
         margin-bottom: 10px;
       }
-      input[type="radio"] {
-        display: none;
-        + label {
-          padding: 15px 20px;
-          font-weight: 500;
-          border: 3px solid $primaryColor;
-          border-radius: 20px;
-          cursor: pointer;
-          margin-right: 5px;
-          background-color: $secondaryColor;
-          display: inline-block;
-          transition: background-color 0.35s, color 0.35s;
-          &:last-child {
-            margin-right: 0px;
+      .input-container {
+        display: flex;
+        flex-wrap: wrap;
+        input[type="radio"] {
+          display: none;
+          + label {
+            padding: 15px 20px;
+            font-weight: 500;
+            border: 3px solid $primaryColor;
+            border-radius: 20px;
+            cursor: pointer;
+            margin-right: 5px;
+            background-color: $secondaryColor;
+            display: inline-block;
+            transition: background-color 0.35s, color 0.35s;
+            &:last-child {
+              margin-right: 0px;
+            }
+          }
+          &:checked + label {
+            background-color: $primaryColor;
+            color: #fff;
           }
         }
-        &:checked + label {
-          background-color: $primaryColor;
-          color: #fff;
+        .long-term-label {
+          @media (max-width: $mediumBreakpoint) {
+            margin-top: 10px;
+          }
         }
       }
     }

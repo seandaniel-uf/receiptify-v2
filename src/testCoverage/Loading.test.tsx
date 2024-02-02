@@ -3,7 +3,7 @@ import { Loading } from "../Components/Loading";
 import { render, screen } from "@testing-library/react";
 
 describe("Loading component", () => {
-  it("should render the Loading Element", () => {
+  it("should render the Loading element", () => {
     render(<Loading />);
     const loadingElement = screen.getByTestId("sr-loading");
     expect(loadingElement).toBeInTheDocument();
