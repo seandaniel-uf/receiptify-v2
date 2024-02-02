@@ -111,6 +111,6 @@ describe("Utility helper functions", () => {
       ],
     };
 
-    expect(addTotal(mockReceiptDataNullDuration)).toEqual(0);
+    expect(addTotal(mockReceiptDataNullDuration)).toEqual("0:00");
   });
 });
