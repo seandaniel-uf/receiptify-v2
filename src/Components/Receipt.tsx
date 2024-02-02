@@ -125,7 +125,7 @@ export const Receipt = ({ receiptData }: { receiptData: ReceiptProps }) => {
           alt="A barcode"
           className="barcode"
         />
-        <p>spotifyreceipts.com</p>
+        <p>receiptify-v2.netlify.app</p>
         <img
           src="https://receiptify.herokuapp.com/assets/img/Spotify_Logo_RGB_Black.png"
           alt="Spotify"
