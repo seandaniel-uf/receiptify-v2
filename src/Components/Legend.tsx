@@ -16,7 +16,7 @@ export const Legend = ({ tracksSelected, logOut }: TracksSelectedProps) => {
             higher up on the list, the more played it is.
           </p>
           <p>
-            <span>Amt</span> - The length of the song
+            <span>Amt</span> - The length of the song.
           </p>
         </div>
       ) : (
