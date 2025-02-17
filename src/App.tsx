@@ -82,9 +82,9 @@ function App() {
   }, [token, handleChange]);
 
   return (
-    <div>
+    <>
+      <Header title="Receiptify" subTitle="Top Music Generator" />
       <div className="wrapper">
-        <Header title="Receiptify" subTitle="Top Music Generator" />
         <main>
           {!token && <Login />}
           <ReceiptFormContainer
@@ -95,7 +95,7 @@ function App() {
           />
         </main>
       </div>
-    </div>
+    </>
   );
 }
 
