@@ -1,4 +1,5 @@
 import { FaSpotify } from "react-icons/fa";
+import Receipt from "/assets/receipt.png";
 
 export const Login = () => {
   const CLIENT_ID = "b0bcfd9d4f2345039350ddf256441f65";
@@ -7,12 +8,24 @@ export const Login = () => {
   const RESPONSE_TYPE = "token";
   return (
     <section className="login-container">
-      <a
-        className="button"
-        href={`${AUTH_ENDPOINT}?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&scope=user-top-read&response_type=${RESPONSE_TYPE}`}
-      >
-        Login to Spotify <FaSpotify />
-      </a>
+      <div className="login-disclaimer-description-container">
+        <p>
+          Generate receipts showcasing your favourite artists and tracks on
+          Spotify. Share with your friends and let them be the judge of your
+          music taste.
+        </p>
+        <a
+          className="button"
+          href={`${AUTH_ENDPOINT}?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&scope=user-top-read&response_type=${RESPONSE_TYPE}`}
+        >
+          Login
+          <FaSpotify />
+        </a>
+        <p>🔒 Authenticate Safely with Spotify’s official login.</p>
+      </div>
+      <div className="img-info-container">
+        <img src={Receipt} alt="A receipt with a list of songs" />
+      </div>
     </section>
   );
 };

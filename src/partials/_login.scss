@@ -1,5 +1,45 @@
 .login-container {
   display: flex;
   justify-content: center;
-  margin: 150px auto;
+  margin-top: 40px;
+  .login-disclaimer-description-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 80px;
+    max-width: 400px;
+    background: $secondaryColor;
+    border-radius: 20px;
+    padding: 20px;
+    max-height: auto;
+    height: 220px;
+    border: 1px solid $primaryColor;
+    @media (max-width: $mediumBreakpoint) {
+      margin: 0 0 40px 0;
+      max-width: 350px;
+    }
+    p:first-child {
+      margin-bottom: 20px;
+    }
+    p:last-child {
+      font-size: 10px;
+      margin-top: 5px;
+    }
+  }
+  .img-info-container {
+    img {
+      height: auto;
+      width: 250px;
+      margin-left: 40px;
+      @media (max-width: $mediumBreakpoint) {
+        margin: 0 0 100px 0;
+        width: 350px;
+      }
+    }
+  }
+  @media (max-width: $mediumBreakpoint) {
+    flex-direction: column;
+    align-items: center;
+  }
 }
