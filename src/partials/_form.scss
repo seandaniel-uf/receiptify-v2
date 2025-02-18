@@ -60,6 +60,9 @@
       &:last-child {
         margin-bottom: 0px;
       }
+      @media (max-width: $mediumBreakpoint) {
+        margin-bottom: 10px;
+      }
     }
   }
 }
