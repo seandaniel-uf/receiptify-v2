@@ -1,7 +1,7 @@
 .login-container {
   display: flex;
   justify-content: center;
-  margin-top: 50px;
+  margin-top: 40px;
   .login-disclaimer-description-container {
     display: flex;
     flex-direction: column;
@@ -20,6 +20,9 @@
       max-width: 350px;
     }
     p:first-child {
+      margin-bottom: 5px;
+    }
+    p:nth-child(2) {
       margin-bottom: 20px;
     }
     p:last-child {
@@ -33,7 +36,7 @@
       width: 250px;
       margin-left: 40px;
       @media (max-width: $mediumBreakpoint) {
-        margin: 0 0 50px 0;
+        margin: 0 0 40px 0;
         width: 350px;
       }
     }
