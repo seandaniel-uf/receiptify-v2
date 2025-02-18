@@ -1,11 +1,11 @@
 @import "./variables";
 
 .legend-container {
-  margin-top: 50px;
+  margin-top: 40px;
   width: 424px;
   @media (max-width: $mediumBreakpoint) {
     width: 350px;
-    margin: 50px 0 0 0;
+    margin: 40px 0 0 0;
   }
   h2 {
     margin-bottom: 25px;
@@ -13,7 +13,7 @@
   div {
     height: 100px;
     @media (max-width: $mediumBreakpoint) {
-      height: 150px;
+      height: 140px;
     }
     p {
       span {
