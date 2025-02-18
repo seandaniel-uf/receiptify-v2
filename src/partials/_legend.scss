@@ -25,5 +25,8 @@
   }
   .logout {
     margin-top: 20px;
+    @media (max-width: $mediumBreakpoint) {
+      margin: 20px auto 0 auto;
+    }
   }
 }
