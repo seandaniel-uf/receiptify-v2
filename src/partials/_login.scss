@@ -21,7 +21,7 @@
     margin-top: 80px;
     background: $secondaryColor;
     padding: 0;
-    height: 210px;
+    height: 230px;
     width: 350px;
     margin-left: 40px;
     @media (max-width: $mediumBreakpoint) {
@@ -33,7 +33,7 @@
       margin-bottom: 5px;
     }
     p:nth-child(2) {
-      margin-bottom: 20px;
+      margin-bottom: 10px;
     }
     p:last-child {
       font-size: 10px;
@@ -45,7 +45,7 @@
       position: absolute;
       left: 0;
       width: 100vw;
-      height: 210px;
+      height: 230px;
       background: $secondaryColor;
       z-index: -1;
     }
