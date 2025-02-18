@@ -23,7 +23,7 @@ export const Login = () => {
           Login
           <FaSpotify />
         </a>
-        <p>🔒 Authenticate Safely with Spotify’s official login.</p>
+        <p>🔒 Authenticate safely with Spotify’s official login.</p>
       </div>
       <div className="img-info-container">
         <img src={Receipt} alt="A receipt with a list of songs" />
