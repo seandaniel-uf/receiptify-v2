@@ -8,6 +8,9 @@ export const Login = () => {
   const RESPONSE_TYPE = "token";
   return (
     <section className="login-container">
+      <div className="img-info-container">
+        <img src={Receipt} alt="A receipt with a list of songs" />
+      </div>
       <div className="login-disclaimer-description-container">
         <p>
           Generate music receipts showcasing your favourite artists and tracks
@@ -24,9 +27,6 @@ export const Login = () => {
           <FaSpotify />
         </a>
         <p>🔒 Authenticate safely with Spotify’s official login.</p>
-      </div>
-      <div className="img-info-container">
-        <img src={Receipt} alt="A receipt with a list of songs" />
       </div>
     </section>
   );
