@@ -5,16 +5,17 @@
   font-family: $secondaryFont;
   font-weight: 600;
   font-size: 18px;
-  width: 400px;
+  width: 100%;
+  max-width: 400px;
   padding: 40px 25px;
-  margin-right: 50px;
+  margin: 0 50px 10px 0;
   filter: brightness(105%);
   background-position-x: -10px;
-  background-image: url("https://receiptify.herokuapp.com/wrinkled-paper-texture-7.jpg");
+  background-image: url("/assets/paper.jpg");
   overflow: hidden;
   @media (max-width: $mediumBreakpoint) {
-    margin: 0 0 40px 0;
-    width: 350px;
+    margin: 0 0 10px 0;
+    max-width: 350px;
   }
   .receipt-title-subtitle-container {
     text-transform: uppercase;
@@ -26,8 +27,10 @@
       font-weight: 600;
       font-size: 30px;
       margin-bottom: 12.5px;
-      svg {
+      img {
         margin-left: 10px;
+        height: 35px;
+        width: 35px;
       }
     }
     p {
@@ -93,5 +96,14 @@ table {
   .spotify-logo {
     margin-top: 12.5px;
     height: 20px;
+  }
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  .download {
+    margin: 10px 0 20px 0;
   }
 }

@@ -15,10 +15,10 @@ export const ReceiptFormContainer = ({
 }: ReceiptFormContainerProps) => {
   return (
     isLoggedIn && (
-      <div className="receipt-form-container">
+      <section className="receipt-form-container">
         <Receipt receiptData={receiptData} />
         <Form handleFormUpdate={handleFormUpdate} logOut={logOut} />
-      </div>
+      </section>
     )
   );
 };

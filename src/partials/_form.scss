@@ -2,14 +2,16 @@
 
 .form-legend-container {
   @media (max-width: $mediumBreakpoint) {
-    width: 350px;
+    width: 100%;
+    max-width: 350px;
   }
   form {
     display: flex;
     flex-direction: column;
     width: max-content;
     @media (max-width: $mediumBreakpoint) {
-      width: 350px;
+      width: 100%;
+      max-width: 350px;
     }
     h2 {
       font-family: $secondaryFont;
