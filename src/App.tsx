@@ -47,6 +47,7 @@ function App() {
   const handleLogout = () => {
     window.sessionStorage.removeItem("token");
     setToken("");
+    window.scroll(0, 0);
   };
 
   // on form change
