@@ -3,7 +3,7 @@
 .receipt-form-container {
   display: flex;
   justify-content: center;
-  margin: 40px 0 100px 0;
+  margin: 40px 0;
   @media (max-width: $mediumBreakpoint) {
     align-items: center;
     flex-direction: column;
