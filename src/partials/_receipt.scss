@@ -104,6 +104,9 @@ table {
   justify-content: flex-start;
   width: 100%;
   .download {
-    margin: 10px 0 40px 0;
+    margin: 20px 0 0 0;
+    @media (max-width: $mediumBreakpoint) {
+      margin: 20px 0 20px 0;
+    }
   }
 }
