@@ -8,7 +8,8 @@
       width: 250px;
       @media (max-width: $mediumBreakpoint) {
         margin: 0 0 40px 0;
-        width: 350px;
+        width: 100%;
+        max-width: 350px;
       }
     }
   }
@@ -19,12 +20,13 @@
     justify-content: center;
     margin-top: 80px;
     background: $secondaryColor;
-    padding: 20px 0;
-    height: 250px;
-    width: 360px;
+    padding: 0;
+    height: 210px;
+    width: 350px;
     margin-left: 40px;
     @media (max-width: $mediumBreakpoint) {
       margin: 0 0 40px 0;
+      width: 100%;
       max-width: 350px;
     }
     p:first-child {
@@ -43,7 +45,7 @@
       position: absolute;
       left: 0;
       width: 100vw;
-      height: 250px;
+      height: 210px;
       background: $secondaryColor;
       z-index: -1;
     }
