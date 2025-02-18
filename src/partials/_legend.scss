@@ -8,13 +8,9 @@
     margin: 40px 0 0 0;
   }
   h2 {
-    margin-bottom: 25px;
+    margin-bottom: 20px;
   }
   div {
-    height: 100px;
-    @media (max-width: $mediumBreakpoint) {
-      height: 140px;
-    }
     p {
       span {
         font-weight: 600;

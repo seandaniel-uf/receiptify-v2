@@ -1,7 +1,7 @@
 @import "./variables";
 
 header {
-  margin: 100px 0 0 0;
+  margin: 40px 0 0 0;
   text-align: center;
   background: $secondaryColor;
   padding: 20px 0;
@@ -10,8 +10,5 @@ header {
     text-transform: uppercase;
     font-family: $secondaryFont;
     font-size: 40px;
-  }
-  @media (max-width: $mediumBreakpoint) {
-    margin: 50px 0 0 0;
   }
 }

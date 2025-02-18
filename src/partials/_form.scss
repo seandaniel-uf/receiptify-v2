@@ -14,7 +14,7 @@
     h2 {
       font-family: $secondaryFont;
       font-weight: 600;
-      margin-bottom: 25px;
+      margin-bottom: 20px;
     }
     fieldset {
       margin-bottom: 20px;
@@ -53,6 +53,9 @@
             margin-top: 10px;
           }
         }
+      }
+      &:last-child {
+        margin-bottom: 0px;
       }
     }
   }
