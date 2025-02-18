@@ -10,9 +10,9 @@ export const Login = () => {
     <section className="login-container">
       <div className="login-disclaimer-description-container">
         <p>
-          Generate receipts showcasing your favourite artists and tracks on
-          Spotify. Share with your friends and let them be the judge of your
-          music taste.
+          Generate music receipts showcasing your favourite artists and tracks
+          on Spotify. <br></br>Share with your friends and let them be the judge
+          of your music taste.
         </p>
         <a
           className="button"
