@@ -22,3 +22,39 @@ npm run dev
 yarn dev
 ```
 The app will be available at: [http://localhost:5173/](http://localhost:5173/)
+
+## 🧩 Folder Structure
+
+```
+src/
+├── Components/
+│   ├── Form.tsx
+│   ├── Header.tsx
+│   ├── Legend.tsx
+│   ├── Loading.tsx
+│   ├── Login.tsx
+│   ├── Receipt.tsx
+│   └── ReceiptFormContainer.tsx
+│
+├── partials/
+│   ├── _form.scss
+│   ├── _global.scss
+│   ├── _header.scss
+│   ├── _legend.scss
+│   ├── _loading.scss
+│   ├── _login.scss
+│   ├── _receipt.scss
+│   ├── _receiptFormContainer.scss
+│   ├── _setup.scss
+│   └── _variables.scss
+│
+├── testCoverage/
+│   ├── Header.test.tsx
+│   ├── Loading.test.tsx
+│   └── utils.test.ts
+│
+├── App.tsx
+├── main.tsx
+├── index.scss
+├── utils.ts
+```
