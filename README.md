@@ -4,8 +4,6 @@ This project was bootstrapped with **[Vite](https://vitejs.dev/guide)**.
 
 ## 🛠️ Getting Started
 
-**Prerequisites**
-
 Make sure you have the following installed:
 ```
 Node.js >= 16
