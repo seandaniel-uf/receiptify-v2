@@ -1,4 +1,3 @@
-// todo: FEATURE: Download Receipt
 // todo: FEATURE: Save as Playlist
 // todo: FEATURE: Open Receipt in New Tab
 // todo: BUG: Song name width - 10 to 50
