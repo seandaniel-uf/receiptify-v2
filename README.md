@@ -1,6 +1,10 @@
-Built with the **[Spotify API](https://developer.spotify.com/documentation/web-api)**.
+## ⚙️ Tech Used
 
-This project was bootstrapped with **[Vite](https://vitejs.dev/guide)**.
+- React
+- TypeScript
+- Vite
+- Jest
+- [Spotify API](https://developer.spotify.com/documentation/web-api)
 
 ## 🛠️ Getting Started
 
