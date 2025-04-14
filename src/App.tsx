@@ -1,10 +1,3 @@
-// todo: FEATURE: Save as Playlist
-// todo: FEATURE: Open Receipt in New Tab
-// todo: BUG: Song name width - 10 to 50
-// todo: Test Coverage 100%
-// todo: API Error states
-// todo: BUG: punycode module deprecated
-
 import { useEffect, useState, useCallback } from "react";
 import axios from "axios";
 import "./index.scss";
