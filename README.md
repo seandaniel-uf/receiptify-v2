@@ -2,7 +2,7 @@ Built with the **[Spotify API](https://developer.spotify.com/documentation/web-a
 
 This project was bootstrapped with **[Vite](https://vitejs.dev/guide)**.
 
-🛠️ ##Getting Started
+🛠️ ## Getting Started
 
 **Prerequisites**
 Make sure you have the following installed:
