@@ -62,3 +62,10 @@ src/
 ├── index.scss
 ├── utils.ts
 ```
+
+## 💪 To Do
+
+- 100% Test coverage for all components
+- Create a playlist from your selected receipt
+- Open the receipt in a new tab
+- API error states
