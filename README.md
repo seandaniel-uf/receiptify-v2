@@ -30,10 +30,10 @@ src/
 ├── Components/
 │   ├── Form.tsx              # To customize your receipt (Favorite tracks or artists, time period, length of receipt)
 │   ├── Header.tsx
-│   ├── Legend.tsx
-│   ├── Loading.tsx
-│   ├── Login.tsx
-│   ├── Receipt.tsx
+│   ├── Legend.tsx            # Legend explaining your receipt
+│   ├── Loading.tsx           # For when the receipt is in a loading state after login
+│   ├── Login.tsx             # Authentication directed to Spotify's secure login
+│   ├── Receipt.tsx           # Your receipt with all your favorite tracks or artists, including a download button to share with friends
 │   └── ReceiptFormContainer.tsx
 │
 ├── partials/                  # All components have their individual partials
@@ -48,8 +48,8 @@ src/
 │   ├── _setup.scss            # For browser consistency 
 │   └── _variables.scss
 │
-├── testCoverage/
-│   ├── Header.test.tsx        # All components and utility functions have their individual test coverage files
+├── testCoverage/              # All components and utility functions have their individual test coverage files
+│   ├── Header.test.tsx        
 │   ├── Loading.test.tsx
 │   └── utils.test.ts
 │
