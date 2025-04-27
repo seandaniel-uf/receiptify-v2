@@ -11,28 +11,24 @@
 Make sure you have the following installed:
 ```
 Node.js >= 16
-npm or yarn
+npm
 ```
 Install once the repository is cloned locally:
 ```
 npm install
-# or
-yarn
 ```
 Run locally:
 ```
 npm run dev
-# or
-yarn dev
 ```
 The app will be available at: [http://localhost:5173/](http://localhost:5173/)
 
-## 🧩 Folder Structure
+## 📁 Folder Structure
 
 ```
 src/
 ├── Components/
-│   ├── Form.tsx
+│   ├── Form.tsx              # To customize your receipt (Favorite tracks or artists, time period, length of receipt)
 │   ├── Header.tsx
 │   ├── Legend.tsx
 │   ├── Loading.tsx
@@ -40,27 +36,27 @@ src/
 │   ├── Receipt.tsx
 │   └── ReceiptFormContainer.tsx
 │
-├── partials/
+├── partials/                  # All components have their individual partials
 │   ├── _form.scss
-│   ├── _global.scss
+│   ├── _global.scss           # Applies across all components
 │   ├── _header.scss
 │   ├── _legend.scss
 │   ├── _loading.scss
 │   ├── _login.scss
 │   ├── _receipt.scss
 │   ├── _receiptFormContainer.scss
-│   ├── _setup.scss
+│   ├── _setup.scss            # For browser consistency 
 │   └── _variables.scss
 │
 ├── testCoverage/
-│   ├── Header.test.tsx
+│   ├── Header.test.tsx        # All components and utility functions have their individual test coverage files
 │   ├── Loading.test.tsx
 │   └── utils.test.ts
 │
-├── App.tsx
+├── App.tsx                    # Login page
 ├── main.tsx
-├── index.scss
-├── utils.ts
+├── index.scss                 # All Sass partial imports 
+├── utils.ts                   # Utilities for formatting time, generating random numbers, and more
 ```
 
 ## 💪 To Do
